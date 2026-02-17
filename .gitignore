@@ -1,0 +1,30 @@
+# Swift / SwiftPM
+.build/
+.swiftpm/
+*.xcodeproj/
+xcuserdata/
+DerivedData/
+*.dSYM.zip
+*.dSYM
+
+# App bundle (built artifact)
+*.app/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+# IDE
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Claude Code
+.claude/

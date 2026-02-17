@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <!-- Main gradient: violet to coral -->
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9B5DE5"/>
+      <stop offset="50%" style="stop-color:#C77DFF"/>
+      <stop offset="100%" style="stop-color:#FF6B8A"/>
+    </linearGradient>
+    <!-- Darker inner gradient -->
+    <linearGradient id="innerGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6930C3"/>
+      <stop offset="100%" style="stop-color:#B06CFF"/>
+    </linearGradient>
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A1A2E"/>
+      <stop offset="100%" style="stop-color:#0D0D1A"/>
+    </linearGradient>
+    <!-- Glow filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <!-- Soft shadow -->
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="20" flood-color="#9B5DE5" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect x="0" y="0" width="1024" height="1024" rx="220" ry="220" fill="url(#bgGrad)"/>
+
+  <!-- Subtle corner accent -->
+  <circle cx="820" cy="200" r="180" fill="#9B5DE5" opacity="0.06"/>
+  <circle cx="200" cy="820" r="160" fill="#FF6B8A" opacity="0.05"/>
+
+  <!-- Ghost/Phantom body -->
+  <g filter="url(#shadow)">
+    <!-- Main phantom shape - rounded top, wavy bottom -->
+    <path d="
+      M 512 180
+      C 340 180, 260 300, 260 420
+      L 260 650
+      C 260 670, 280 700, 310 680
+      C 340 660, 360 690, 390 710
+      C 420 730, 440 700, 460 680
+      C 480 660, 500 690, 512 700
+      C 524 690, 544 660, 564 680
+      C 584 700, 604 730, 634 710
+      C 664 690, 684 660, 714 680
+      C 744 700, 764 670, 764 650
+      L 764 420
+      C 764 300, 684 180, 512 180
+      Z"
+      fill="url(#brandGrad)"
+      opacity="0.95"
+    />
+
+    <!-- Phantom face highlight/sheen -->
+    <path d="
+      M 512 200
+      C 360 200, 290 310, 290 420
+      L 290 500
+      C 400 480, 500 470, 620 490
+      L 740 420
+      C 740 310, 664 200, 512 200
+      Z"
+      fill="white"
+      opacity="0.12"
+    />
+
+    <!-- Left eye -->
+    <ellipse cx="420" cy="420" rx="42" ry="52" fill="#1A1A2E"/>
+    <ellipse cx="430" cy="408" rx="14" ry="16" fill="white" opacity="0.9"/>
+
+    <!-- Right eye -->
+    <ellipse cx="604" cy="420" rx="42" ry="52" fill="#1A1A2E"/>
+    <ellipse cx="614" cy="408" rx="14" ry="16" fill="white" opacity="0.9"/>
+  </g>
+
+  <!-- Paintbrush held by phantom -->
+  <g transform="translate(580, 520) rotate(35)">
+    <!-- Brush handle -->
+    <rect x="0" y="0" width="16" height="200" rx="8" fill="#C4A35A"/>
+    <rect x="0" y="0" width="16" height="200" rx="8" fill="url(#innerGrad)" opacity="0.3"/>
+    <!-- Ferrule -->
+    <rect x="-3" y="-12" width="22" height="20" rx="3" fill="#A0A0B0"/>
+    <!-- Brush tip -->
+    <path d="M -2 -12 L 8 -55 L 18 -12 Z" fill="url(#brandGrad)"/>
+    <path d="M 2 -12 L 8 -48 L 14 -12 Z" fill="white" opacity="0.2"/>
+  </g>
+
+  <!-- Small sparkles around the phantom -->
+  <g fill="#C77DFF" opacity="0.7">
+    <!-- Sparkle 1 -->
+    <path d="M 180 320 L 188 335 L 196 320 L 188 305 Z"/>
+    <!-- Sparkle 2 -->
+    <path d="M 830 380 L 836 392 L 842 380 L 836 368 Z"/>
+    <!-- Sparkle 3 -->
+    <path d="M 280 600 L 285 610 L 290 600 L 285 590 Z"/>
+  </g>
+  <g fill="#FF6B8A" opacity="0.5">
+    <!-- Sparkle 4 -->
+    <path d="M 770 560 L 776 572 L 782 560 L 776 548 Z"/>
+    <!-- Sparkle 5 -->
+    <path d="M 350 230 L 354 238 L 358 230 L 354 222 Z"/>
+  </g>
+</svg>
